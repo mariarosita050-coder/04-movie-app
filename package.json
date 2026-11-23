@@ -1,0 +1,17 @@
+{
+  "name": "04-movie-app",
+  "version": "1.0.0",
+  "description": "A responsive movie application built with HTML, CSS, JavaScript, and the TMDB API.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "vite": "^8.3.8"
+  }
+}

@@ -1,0 +1,670 @@
+/* =========================================
+   1. RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   2. BODY
+========================================= */
+
+body {
+    background: #121212;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   3. NAVBAR
+========================================= */
+
+nav {
+    background: #1a1a1a;
+    padding: 20px 40px;
+    border-bottom: 1px solid #333;
+}
+
+nav h1 {
+    font-size: 28px;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   4. SEARCH SECTION
+========================================= */
+
+body > section:nth-of-type(1) {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+
+    display: flex;
+    gap: 12px;
+}
+
+
+/* =========================================
+   5. SEARCH INPUT
+========================================= */
+
+#search-input {
+    flex: 1;
+
+    padding: 16px 20px;
+
+    background: #1f1f1f;
+    color: white;
+
+    border: 1px solid #444;
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+/* Saat input diklik */
+
+#search-input:focus {
+    border-color: #e50914;
+
+    box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.15);
+}
+
+
+/* Placeholder */
+
+#search-input::placeholder {
+    color: #888;
+}
+
+
+/* =========================================
+   6. SEARCH BUTTON
+========================================= */
+
+#search-button {
+    padding: 15px 25px;
+
+    background: #e50914;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 12px rgba(229, 9, 20, 0.25);
+
+    transition: background 0.3s ease,
+                transform 0.2s ease;
+}
+
+
+/* Hover */
+
+#search-button:hover {
+    background: #f40612;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 18px rgba(229, 9, 20, 0.35);
+}
+
+
+/* Saat tombol diklik */
+
+#search-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   7. CLEAR BUTTON
+========================================= */
+
+#clear-button {
+    padding: 15px 25px;
+
+    background: #333;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background 0.3s ease,
+                transform 0.2s ease;
+}
+
+
+/* Hover */
+
+#clear-button:hover {
+    background: #555;
+
+    transform: translateY(-2px);
+}
+
+
+/* Saat tombol diklik */
+
+#clear-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   8. MOVIE SECTION
+========================================= */
+
+body > section:nth-of-type(2) {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 50px;
+}
+
+
+/* =========================================
+   9. SECTION TITLE
+========================================= */
+
+#section-title {
+    margin-bottom: 25px;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    color: white;
+}
+
+
+/* =========================================
+   10. MOVIE LIST
+========================================= */
+
+#movie-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 24px;
+}
+
+
+/* =========================================
+   11. MOVIE CARD
+========================================= */
+
+.movie-card {
+    background: #1f1f1f;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.3);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================
+   12. MOVIE CARD HOVER
+========================================= */
+
+.movie-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================================
+   13. MOVIE POSTER
+========================================= */
+
+.movie-card img {
+    width: 100%;
+    height: 350px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+.movie-card:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   14. MOVIE TITLE
+========================================= */
+
+.movie-card h3 {
+    margin: 14px 16px 8px;
+
+    font-size: 20px;
+    line-height: 1.3;
+
+    color: white;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   15. MOVIE INFORMATION
+========================================= */
+
+.movie-card p {
+    margin: 8px 16px;
+
+    color: #cccccc;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* Movie Year */
+
+.movie-year {
+    color: #bbbbbb;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   16. RATING
+========================================= */
+
+.movie-card p:nth-of-type(1) {
+    display: inline-block;
+
+    margin: 8px 16px;
+
+    padding: 6px 10px;
+
+    background: rgba(255, 215, 0, 0.12);
+
+    color: #ffd700;
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    border-radius: 6px;
+}
+
+
+/* =========================================
+   17. OVERVIEW
+========================================= */
+
+.movie-card p:last-child {
+    display: -webkit-box;
+
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+
+    color: #aaaaaa;
+}
+
+
+/* =========================================
+   18. RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 18px 20px;
+    }
+
+    nav h1 {
+        font-size: 24px;
+    }
+
+
+    body > section:nth-of-type(1) {
+        margin: 30px auto;
+        padding: 0 20px;
+    }
+
+
+    #section-title {
+        font-size: 24px;
+    }
+
+
+    #movie-list {
+        grid-template-columns:
+            repeat(auto-fit, minmax(180px, 1fr));
+
+        gap: 18px;
+    }
+
+
+    .movie-card img {
+        height: 280px;
+    }
+
+
+    .movie-card h3 {
+        font-size: 18px;
+    }
+
+}
+
+
+/* =========================================
+   19. RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    nav {
+        padding: 16px;
+    }
+
+
+    nav h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+
+    /* Search menjadi vertikal */
+
+    body > section:nth-of-type(1) {
+        margin: 25px auto;
+
+        padding: 0 16px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    #search-input {
+        width: 100%;
+
+        padding: 14px;
+    }
+
+
+    #search-button {
+        width: 100%;
+
+        padding: 14px;
+    }
+
+
+    #clear-button {
+        width: 100%;
+
+        padding: 14px;
+    }
+
+
+    /* Movie section */
+
+    body > section:nth-of-type(2) {
+        padding: 0 16px 40px;
+    }
+
+
+    #section-title {
+        font-size: 22px;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* Movie grid */
+
+    #movie-list {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 14px;
+    }
+
+
+    /* Poster */
+
+    .movie-card img {
+        height: 240px;
+    }
+
+
+    /* Title */
+
+    .movie-card h3 {
+        margin: 10px 10px 6px;
+
+        font-size: 16px;
+    }
+
+
+    /* Text */
+
+    .movie-card p {
+        margin: 6px 10px;
+
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================
+   20. VERY SMALL PHONE
+========================================= */
+
+@media (max-width: 350px) {
+
+    #movie-list {
+        grid-template-columns: 1fr;
+    }
+
+
+    .movie-card img {
+        height: 400px;
+    }
+
+}
+
+
+/* =========================================
+   21. MOVIE DETAIL
+========================================= */
+
+#movie-detail {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+
+    background: #1f1f1f;
+
+    border-radius: 12px;
+}
+
+
+/* =========================================
+   22. BACK BUTTON
+========================================= */
+
+#back-button {
+    padding: 12px 20px;
+
+    background: #333;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-bottom: 25px;
+
+    transition: background 0.3s ease,
+                transform 0.2s ease;
+}
+
+
+#back-button:hover {
+    background: #555;
+
+    transform: translateY(-2px);
+}
+
+
+#back-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   23. MOVIE DETAIL POSTER
+========================================= */
+
+#movie-detail img {
+    width: 300px;
+    height: 450px;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   24. MOVIE DETAIL CONTENT
+========================================= */
+
+.movie-detail-content {
+    display: flex;
+
+    gap: 40px;
+
+    align-items: flex-start;
+}
+
+
+/* =========================================
+   25. MOVIE DETAIL INFO
+========================================= */
+
+.movie-detail-info {
+    flex: 1;
+
+    padding-top: 5px;
+}
+
+
+.movie-detail-info h2 {
+    margin-bottom: 15px;
+
+    font-size: 32px;
+}
+
+
+/* =========================================
+   26. MOVIE TAGLINE
+========================================= */
+
+.movie-tagline {
+    margin-bottom: 15px;
+
+    color: #bbbbbb;
+
+    font-size: 18px;
+
+    font-style: italic;
+}
+
+
+/* =========================================
+   27. MOVIE DETAIL RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .movie-detail-content {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    #movie-detail img {
+        width: 100%;
+
+        max-width: 300px;
+
+        height: auto;
+    }
+
+
+    .movie-detail-info {
+        width: 100%;
+    }
+
+
+    #movie-detail {
+        margin: 25px 16px;
+
+        padding: 20px;
+    }
+
+
+    .movie-detail-info h2 {
+        font-size: 26px;
+    }
+
+}
