@@ -41,8 +41,10 @@ A responsive movie application built with HTML, CSS, JavaScript, and the TMDB AP
 └── README.md
 
 ## How to Run
-
 1. Clone this repository.
 2. Open the project folder in VS Code.
-3. Add your TMDB API access token in `js/script.js`.
-4. Open `index.html` in your browser.
+3. Install the project dependencies with npm install.
+4. Create a .env file in the project root.
+5. Add your TMDB access token to VITE_TMDB_ACCESS_TOKEN in the .env file.
+6. Run the project with npm run dev.
+7. Open the local URL provided by Vite in your browser.
